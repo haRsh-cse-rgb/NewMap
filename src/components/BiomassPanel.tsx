@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Leaf, TrendingUp, BarChart3, X, Table, BarChart } from 'lucide-react';
+import { Leaf, TrendingUp, BarChart3, X, Table, BarChart, PieChart, Donut } from 'lucide-react';
 
 interface CropData {
   kharifRice: number;
@@ -22,7 +22,14 @@ interface BiomassPanelProps {
   onClose: () => void;
 }
 
-type ViewMode = 'table' | 'chart';
+type CropItem = {
+  label: string;
+  value: number;
+  color: string;
+  bgColor: string;
+};
+
+type ViewMode = 'table' | 'bar' | 'pie' | 'donut';
 
 export default function BiomassPanel({ stateName, districtName, onClose }: BiomassPanelProps) {
   const [districtData, setDistrictData] = useState<District | null>(null);
@@ -143,15 +150,15 @@ export default function BiomassPanel({ stateName, districtName, onClose }: Bioma
     if (!cropData) return null;
 
     const crops = [
-      { label: 'Kharif Rice', value: cropData.kharifRice, color: 'bg-amber-500' },
-      { label: 'Rabi Rice', value: cropData.rabiRice, color: 'bg-yellow-500' },
-      { label: 'Wheat', value: cropData.wheat, color: 'bg-orange-500' },
-      { label: 'Cotton', value: cropData.cotton, color: 'bg-blue-500' },
-      { label: 'Sugarcane', value: cropData.sugarcane, color: 'bg-green-600' },
+      { label: 'Kharif Rice', value: cropData.kharifRice, color: '#f59e0b', bgColor: 'bg-amber-500' },
+      { label: 'Rabi Rice', value: cropData.rabiRice, color: '#eab308', bgColor: 'bg-yellow-500' },
+      { label: 'Wheat', value: cropData.wheat, color: '#f97316', bgColor: 'bg-orange-500' },
+      { label: 'Cotton', value: cropData.cotton, color: '#3b82f6', bgColor: 'bg-blue-500' },
+      { label: 'Sugarcane', value: cropData.sugarcane, color: '#16a34a', bgColor: 'bg-green-600' },
     ];
 
-    const maxValue = Math.max(...crops.map(c => c.value));
-    const hasData = maxValue > 0;
+    const filteredCrops = crops.filter(crop => crop.value > 0);
+    const hasData = filteredCrops.length > 0;
 
     if (!hasData) {
       return (
@@ -161,27 +168,126 @@ export default function BiomassPanel({ stateName, districtName, onClose }: Bioma
       );
     }
 
+    const totalValue = filteredCrops.reduce((sum, crop) => sum + crop.value, 0);
+
+    if (viewMode === 'pie' || viewMode === 'donut') {
+      return renderPieChart(filteredCrops, totalValue);
+    }
+
+    return renderBarChart(filteredCrops);
+  };
+
+  const renderPieChart = (crops: CropItem[], totalValue: number) => {
+    let cumulativePercentage = 0;
+    const radius = viewMode === 'donut' ? 60 : 80;
+    const innerRadius = viewMode === 'donut' ? 40 : 0;
+
     return (
-      <div className="space-y-6 py-4">
-        {crops.map((crop) => (
-          crop.value > 0 && (
-            <div key={crop.label} className="space-y-2">
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-medium text-gray-700">{crop.label}</span>
-                <span className="text-sm font-semibold text-gray-900">
-                  {crop.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {getUnit()}
-                </span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-8 overflow-hidden">
-                <div
-                  className={`${crop.color} h-full flex items-center justify-end px-3 text-white text-xs font-medium transition-all duration-500`}
-                  style={{ width: `${(crop.value / maxValue) * 100}%` }}
-                >
-                  {((crop.value / maxValue) * 100).toFixed(0)}%
-                </div>
+      <div className="py-4">
+        <div className="relative w-80 h-80 mx-auto mb-6">
+          <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+            {crops.length === 1 ? (
+              <>
+                <circle cx="100" cy="100" r={radius} fill={crops[0].color} />
+                {viewMode === 'donut' && (
+                  <circle cx="100" cy="100" r={innerRadius} fill="white" />
+                )}
+              </>
+            ) : (
+              crops.map((crop) => {
+                const percentage = (crop.value / totalValue) * 100;
+                const startAngle = cumulativePercentage * 3.6; // Convert percentage to degrees
+                const endAngle = (cumulativePercentage + percentage) * 3.6;
+                const largeArcFlag = percentage > 50 ? 1 : 0;
+                
+                const x1 = 100 + radius * Math.cos((startAngle * Math.PI) / 180);
+                const y1 = 100 + radius * Math.sin((startAngle * Math.PI) / 180);
+                const x2 = 100 + radius * Math.cos((endAngle * Math.PI) / 180);
+                const y2 = 100 + radius * Math.sin((endAngle * Math.PI) / 180);
+                
+                const x3 = 100 + innerRadius * Math.cos((endAngle * Math.PI) / 180);
+                const y3 = 100 + innerRadius * Math.sin((endAngle * Math.PI) / 180);
+                const x4 = 100 + innerRadius * Math.cos((startAngle * Math.PI) / 180);
+                const y4 = 100 + innerRadius * Math.sin((startAngle * Math.PI) / 180);
+
+                const pathData = viewMode === 'donut' 
+                  ? `M ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} L ${x3} ${y3} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${x4} ${y4} Z`
+                  : `M 100 100 L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+
+                cumulativePercentage += percentage;
+
+                return (
+                  <path
+                    key={crop.label}
+                    d={pathData}
+                    fill={crop.color}
+                    stroke="white"
+                    strokeWidth="2"
+                    className="hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                );
+              })
+            )}
+          </svg>
+          
+          {viewMode === 'donut' && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">{totalValue.toFixed(1)}</div>
+                <div className="text-sm text-gray-600">{getUnit()}</div>
               </div>
             </div>
-          )
+          )}
+        </div>
+
+        <div className="space-y-3">
+          {crops.map((crop) => {
+            const percentage = (crop.value / totalValue) * 100;
+            return (
+              <div key={crop.label} className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div 
+                    className="w-4 h-4 rounded-full" 
+                    style={{ backgroundColor: crop.color }}
+                  />
+                  <span className="text-sm font-medium text-gray-700">{crop.label}</span>
+                </div>
+                <div className="text-right">
+                  <div className="text-sm font-semibold text-gray-900">
+                    {crop.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {getUnit()}
+                  </div>
+                  <div className="text-xs text-gray-500">{percentage.toFixed(1)}%</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  const renderBarChart = (crops: CropItem[]) => {
+    const maxValue = Math.max(...crops.map(c => c.value));
+
+    return (
+      <div className="space-y-4 py-4">
+        {crops.map((crop) => (
+          <div key={crop.label} className="space-y-2">
+            <div className="flex justify-between items-center">
+              <span className="text-sm font-medium text-gray-700">{crop.label}</span>
+              <span className="text-sm font-semibold text-gray-900">
+                {crop.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {getUnit()}
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-8 overflow-hidden">
+              <div
+                className={`${crop.bgColor} h-full flex items-center justify-end px-3 text-white text-xs font-medium transition-all duration-500`}
+                style={{ width: `${(crop.value / maxValue) * 100}%` }}
+              >
+                {((crop.value / maxValue) * 100).toFixed(0)}%
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     );
@@ -280,16 +386,38 @@ export default function BiomassPanel({ stateName, districtName, onClose }: Bioma
                 >
                   <Table className="w-4 h-4" />
                 </button>
-                <button
-                  onClick={() => setViewMode('chart')}
+                {/* <button
+                  onClick={() => setViewMode('bar')}
                   className={`p-2 rounded transition-colors ${
-                    viewMode === 'chart'
+                    viewMode === 'bar'
                       ? 'bg-green-600 text-white'
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
-                  title="Chart View"
+                  title="Bar Chart"
                 >
                   <BarChart className="w-4 h-4" />
+                </button> */}
+                <button
+                  onClick={() => setViewMode('pie')}
+                  className={`p-2 rounded transition-colors ${
+                    viewMode === 'pie'
+                      ? 'bg-green-600 text-white'
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                  title="Pie Chart"
+                >
+                  <PieChart className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode('donut')}
+                  className={`p-2 rounded transition-colors ${
+                    viewMode === 'donut'
+                      ? 'bg-green-600 text-white'
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                  title="Donut Chart"
+                >
+                  <Donut className="w-4 h-4" />
                 </button>
               </div>
             </div>

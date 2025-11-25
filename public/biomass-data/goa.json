@@ -1,0 +1,54 @@
+{
+    "state": "Goa",
+    "districts":[
+        {
+          "name": "North Goa",
+          "bioenergyPotential": {
+            "kharifRice": 399.66,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 4.39,
+            "sugarcane": 219.03
+          },
+          "grossBiomass": {
+            "kharifRice": 83.61,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 0.64,
+            "sugarcane": 42.06
+          },
+          "surplusBiomass": {
+            "kharifRice": 25.78,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 0.25,
+            "sugarcane": 10.95
+          }
+        },
+        {
+          "name": "South Goa",
+          "bioenergyPotential": {
+            "kharifRice": 224.9,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 0,
+            "sugarcane": 0
+          },
+          "grossBiomass": {
+            "kharifRice": 56.37,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 0,
+            "sugarcane": 0
+          },
+          "surplusBiomass": {
+            "kharifRice": 14.51,
+            "rabiRice": 0,
+            "wheat": 0,
+            "cotton": 0,
+            "sugarcane": 0
+          }
+        }
+      ]
+
+}

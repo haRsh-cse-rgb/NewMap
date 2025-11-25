@@ -115,7 +115,7 @@ export default function PlantDetailsCapsule({ plant, onClose }: PlantDetailsCaps
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span className="text-sm font-medium text-blue-900">{item.category}</span>
                   </div>
-                  <span className="text-sm font-bold text-blue-700">{item.capacity} MTPA</span>
+                  <span className="text-sm font-bold text-blue-700">{item.capacity} Tonnes</span>
                 </div>
               ))}
             </div>

@@ -68,7 +68,7 @@ export default function FilterPanel({
         ${onToggle ? (isOpen ? 'translate-x-0' : '-translate-x-full') : ''}
         ${onToggle ? 'top-0 left-0 h-full w-80 bg-white shadow-xl lg:shadow-lg' : ''}
         ${onToggle ? 'lg:rounded-xl lg:p-6 p-6' : ''}
-        space-y-6 overflow-y-auto
+        space-y-4 overflow-y-auto
       `}>
         {showHeader && onToggle && (
           <div className="flex items-center justify-between mb-4">
@@ -85,8 +85,8 @@ export default function FilterPanel({
           </div>
         )}
 
-      <div>
-        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+      <div className="mb-3">
+        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
           <MapPin className="w-4 h-4" />
           State
         </label>
@@ -106,8 +106,8 @@ export default function FilterPanel({
       </div>
 
       {selectedState && districts.length > 0 && (
-        <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+        <div className="mb-3">
+          <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
             <MapPin className="w-4 h-4" />
             District
           </label>
@@ -124,8 +124,8 @@ export default function FilterPanel({
         </div>
       )}
 
-      <div>
-        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-3">
+      <div className="mb-3">
+        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
           <Building2 className="w-4 h-4" />
           Plant Type
         </label>

@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Compact global UI scaling */
+.sidebar-scale {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+  
+  

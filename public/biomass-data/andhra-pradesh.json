@@ -1,0 +1,259 @@
+{
+    "state": "Andhra Pradesh",
+    "districts":[
+        {
+        "name": "Bagalkot",
+        "bioenergyPotential": { "kharifRice": 11.16, "rabiRice": 0, "wheat": 0, "cotton": 107.82, "sugarcane": 4713.34 },
+        "grossBiomass": { "kharifRice": 14.49, "rabiRice": 0, "wheat": 0, "cotton": 15.65, "sugarcane": 1154.16 },
+        "surplusBiomass": { "kharifRice": 0.72, "rabiRice": 0, "wheat": 0, "cotton": 6.2, "sugarcane": 235.67 }
+        },
+        {
+        "name": "Bellary",
+        "bioenergyPotential": { "kharifRice": 266.19, "rabiRice": 1.18, "wheat": 0, "cotton": 2577.6, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 319.33, "rabiRice": 1.53, "wheat": 0, "cotton": 324.04, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 17.17, "rabiRice": 0.08, "wheat": 0, "cotton": 148.14, "sugarcane": 0 }
+        },
+        {
+        "name": "Belgaum",
+        "bioenergyPotential": { "kharifRice": 1061.97, "rabiRice": 0, "wheat": 0, "cotton": 1203.53, "sugarcane": 17576.77 },
+        "grossBiomass": { "kharifRice": 340.31, "rabiRice": 0, "wheat": 0, "cotton": 174.67, "sugarcane": 3640.86 },
+        "surplusBiomass": { "kharifRice": 68.51, "rabiRice": 0, "wheat": 0, "cotton": 69.17, "sugarcane": 878.84 }
+        },
+        {
+        "name": "Bangalore Urban",
+        "bioenergyPotential": { "kharifRice": 4.34, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 5.65, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.28, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Bangalore Rural",
+        "bioenergyPotential": { "kharifRice": 7.11, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 9.24, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.46, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Bidar",
+        "bioenergyPotential": { "kharifRice": 189.05, "rabiRice": 339.75, "wheat": 0, "cotton": 277.27, "sugarcane": 2193.74 },
+        "grossBiomass": { "kharifRice": 157.23, "rabiRice": 276.75, "wheat": 0, "cotton": 25.76, "sugarcane": 407.1 },
+        "surplusBiomass": { "kharifRice": 12.2, "rabiRice": 21.92, "wheat": 0, "cotton": 15.94, "sugarcane": 109.69 }
+        },
+        {
+        "name": "Chamaraja-nagar",
+        "bioenergyPotential": { "kharifRice": 226.78, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 294.53, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 14.63, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Chik Ballapur",
+        "bioenergyPotential": { "kharifRice": 11.23, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 14.51, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.72, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Chikmagalur",
+        "bioenergyPotential": { "kharifRice": 123.83, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 160.85, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 7.99, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Chitradurga",
+        "bioenergyPotential": { "kharifRice": 146.78, "rabiRice": 35.05, "wheat": 0, "cotton": 122.88, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 190.66, "rabiRice": 17.63, "wheat": 0, "cotton": 17.83, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 9.47, "rabiRice": 2.26, "wheat": 0, "cotton": 7.06, "sugarcane": 0 }
+        },
+        {
+        "name": "Dakshina Kannada",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Davanagere",
+        "bioenergyPotential": { "kharifRice": 289.48, "rabiRice": 6.58, "wheat": 0, "cotton": 1338.56, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 376.04, "rabiRice": 8.55, "wheat": 0, "cotton": 194.26, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 18.68, "rabiRice": 0.42, "wheat": 0, "cotton": 76.93, "sugarcane": 0 }
+        },
+        {
+        "name": "Dharwad",
+        "bioenergyPotential": { "kharifRice": 85.62, "rabiRice": 0, "wheat": 0, "cotton": 1098.03, "sugarcane": 1343.57 },
+        "grossBiomass": { "kharifRice": 111.22, "rabiRice": 0, "wheat": 0, "cotton": 159.36, "sugarcane": 288.26 },
+        "surplusBiomass": { "kharifRice": 5.52, "rabiRice": 0, "wheat": 0, "cotton": 63.11, "sugarcane": 67.18 }
+        },
+        {
+        "name": "Gadag",
+        "bioenergyPotential": { "kharifRice": 8.61, "rabiRice": 0, "wheat": 0, "cotton": 919.02, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 11.18, "rabiRice": 0, "wheat": 0, "cotton": 133.38, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.56, "rabiRice": 0, "wheat": 0, "cotton": 52.82, "sugarcane": 0 }
+        },
+        {
+        "name": "Hassan",
+        "bioenergyPotential": { "kharifRice": 194.96, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 253.25, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 12.58, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Haveri",
+        "bioenergyPotential": { "kharifRice": 173.49, "rabiRice": 0.04, "wheat": 0, "cotton": 2579, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 225.36, "rabiRice": 0.05, "wheat": 0, "cotton": 374.29, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 11.19, "rabiRice": 0, "wheat": 0, "cotton": 148.22, "sugarcane": 0 }
+        },
+        {
+        "name": "Gulbarga",
+        "bioenergyPotential": { "kharifRice": 87.15, "rabiRice": 8.07, "wheat": 0, "cotton": 3635.28, "sugarcane": 2126.05 },
+        "grossBiomass": { "kharifRice": 113.19, "rabiRice": 10.48, "wheat": 0, "cotton": 513.59, "sugarcane": 438.15 },
+        "surplusBiomass": { "kharifRice": 5.62, "rabiRice": 0.52, "wheat": 0, "cotton": 208.92, "sugarcane": 106.3 }
+        },
+        {
+        "name": "Kodagu",
+        "bioenergyPotential": { "kharifRice": 94.35, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 122.56, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 6.09, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kolar",
+        "bioenergyPotential": { "kharifRice": 7.52, "rabiRice": 0.14, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 8.89, "rabiRice": 0.12, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.49, "rabiRice": 0.01, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Koppal",
+        "bioenergyPotential": { "kharifRice": 179.58, "rabiRice": 0.13, "wheat": 0, "cotton": 172.81, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 233.29, "rabiRice": 0.17, "wheat": 0, "cotton": 25.08, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 11.59, "rabiRice": 0.01, "wheat": 0, "cotton": 9.93, "sugarcane": 0 }
+        },
+        {
+        "name": "Mandya",
+        "bioenergyPotential": { "kharifRice": 273.93, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 355.85, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 17.67, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Mysore",
+        "bioenergyPotential": { "kharifRice": 494.81, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 642.77, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 31.92, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Raichur",
+        "bioenergyPotential": { "kharifRice": 252.66, "rabiRice": 65.19, "wheat": 0, "cotton": 4157.59, "sugarcane": 89.5 },
+        "grossBiomass": { "kharifRice": 282.8, "rabiRice": 53.35, "wheat": 0, "cotton": 319.22, "sugarcane": 9.71 },
+        "surplusBiomass": { "kharifRice": 16.3, "rabiRice": 4.21, "wheat": 0, "cotton": 238.94, "sugarcane": 4.47 }
+        },
+        {
+        "name": "Ramanagaram",
+        "bioenergyPotential": { "kharifRice": 22.4, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 29.1, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 1.44, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Shimoga",
+        "bioenergyPotential": { "kharifRice": 238.86, "rabiRice": 0, "wheat": 0, "cotton": 243.54, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 310.27, "rabiRice": 0, "wheat": 0, "cotton": 35.34, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 15.41, "rabiRice": 0, "wheat": 0, "cotton": 14, "sugarcane": 0 }
+        },
+        {
+        "name": "Tumkur",
+        "bioenergyPotential": { "kharifRice": 61.96, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 80.4, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 4, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Udupi",
+        "bioenergyPotential": { "kharifRice": 97.4, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 102.18, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 6.28, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Uttara Kannada",
+        "bioenergyPotential": { "kharifRice": 266.13, "rabiRice": 6.95, "wheat": 0, "cotton": 275.47, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 345.69, "rabiRice": 9.02, "wheat": 0, "cotton": 39.98, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 17.17, "rabiRice": 0.45, "wheat": 0, "cotton": 15.83, "sugarcane": 0 }
+        },
+        {
+        "name": "Vijayapura",
+        "bioenergyPotential": { "kharifRice": 0.05, "rabiRice": 0, "wheat": 0, "cotton": 294.44, "sugarcane": 1578.7 },
+        "grossBiomass": { "kharifRice": 0.06, "rabiRice": 0, "wheat": 0, "cotton": 37.46, "sugarcane": 387.37 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 16.92, "sugarcane": 78.94 }
+        },
+        {
+        "name": "Yadgir",
+        "bioenergyPotential": { "kharifRice": 49.22, "rabiRice": 15.4, "wheat": 0, "cotton": 1727.2, "sugarcane": 694.63 },
+        "grossBiomass": { "kharifRice": 58.28, "rabiRice": 19.22, "wheat": 0, "cotton": 234.77, "sugarcane": 159.74 },
+        "surplusBiomass": { "kharifRice": 3.18, "rabiRice": 0.99, "wheat": 0, "cotton": 99.26, "sugarcane": 34.73 }
+        },
+        
+        {
+        "name": "Anantapur",
+        "bioenergyPotential": { "kharifRice": 250.03, "rabiRice": 0.02, "wheat": 0, "cotton": 863.67, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 211.9, "rabiRice": 0.02, "wheat": 0, "cotton": 73.51, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 16.13, "rabiRice": 0, "wheat": 0, "cotton": 49.64, "sugarcane": 0 }
+        },
+        {
+        "name": "Chittoor",
+        "bioenergyPotential": { "kharifRice": 575.67, "rabiRice": 146.27, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 378.11, "rabiRice": 119.15, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 37.14, "rabiRice": 9.44, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "East Godavari",
+        "bioenergyPotential": { "kharifRice": 1016.47, "rabiRice": 750.52, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 828.61, "rabiRice": 612.09, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 65.58, "rabiRice": 48.42, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Guntur",
+        "bioenergyPotential": { "kharifRice": 1943.97, "rabiRice": 728.63, "wheat": 0, "cotton": 5295.64, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 1583.56, "rabiRice": 593.54, "wheat": 0, "cotton": 394.65, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 125.42, "rabiRice": 47.01, "wheat": 0, "cotton": 304.35, "sugarcane": 0 }
+        },
+        {
+        "name": "Krishna",
+        "bioenergyPotential": { "kharifRice": 1278.26, "rabiRice": 1001.32, "wheat": 0, "cotton": 1710.36, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 1041.27, "rabiRice": 800.77, "wheat": 0, "cotton": 152.75, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 82.47, "rabiRice": 64.6, "wheat": 0, "cotton": 98.3, "sugarcane": 0 }
+        },
+        {
+        "name": "Kurnool",
+        "bioenergyPotential": { "kharifRice": 644.27, "rabiRice": 251.76, "wheat": 0, "cotton": 8482.94, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 533.55, "rabiRice": 205.09, "wheat": 0, "cotton": 700.85, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 41.57, "rabiRice": 16.24, "wheat": 0, "cotton": 487.53, "sugarcane": 0 }
+        },
+        {
+        "name": "Prakasam",
+        "bioenergyPotential": { "kharifRice": 358.53, "rabiRice": 637.74, "wheat": 0, "cotton": 5580.67, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 292.06, "rabiRice": 519.5, "wheat": 0, "cotton": 401.55, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 23.13, "rabiRice": 41.14, "wheat": 0, "cotton": 320.73, "sugarcane": 0 }
+        },
+        {
+        "name": "Nellore",
+        "bioenergyPotential": { "kharifRice": 309.76, "rabiRice": 1504.44, "wheat": 0, "cotton": 86.55, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 252.33, "rabiRice": 1225.52, "wheat": 0, "cotton": 1.45, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 19.98, "rabiRice": 97.06, "wheat": 0, "cotton": 4.97, "sugarcane": 0 }
+        },
+        {
+        "name": "Srikakulam",
+        "bioenergyPotential": { "kharifRice": 525.87, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 428.37, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 33.93, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Visakhapatnam",
+        "bioenergyPotential": { "kharifRice": 434.42, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 353.88, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 28.03, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Vizianagaram",
+        "bioenergyPotential": { "kharifRice": 542.79, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 542.79, "rabiRice": 442.15, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 35.02, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "West Godavari",
+        "bioenergyPotential": { "kharifRice": 1245.26, "rabiRice": 1494.51, "wheat": 0, "cotton": 729.26, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 1014.38, "rabiRice": 1217.42, "wheat": 0, "cotton": 65.13, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 80.34, "rabiRice": 96.42, "wheat": 0, "cotton": 41.91, "sugarcane": 0 }
+        }
+        ]
+
+}

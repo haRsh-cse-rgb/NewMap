@@ -23,12 +23,12 @@ export default function StatsPanel({ plants }: StatsPanelProps) {
       icon: Factory,
       color: 'bg-blue-500'
     },
-    {
-      label: 'Under Construction',
-      value: underConstructionPlants,
-      icon: Building2,
-      color: 'bg-yellow-500'
-    },
+    // {
+    //   label: 'Under Construction',
+    //   value: underConstructionPlants,
+    //   icon: Building2,
+    //   color: 'bg-yellow-500'
+    // },
     {
       label: 'States',
       value: uniqueStates,
@@ -50,10 +50,10 @@ export default function StatsPanel({ plants }: StatsPanelProps) {
           <div key={index} className="bg-white rounded-xl shadow-lg p-4">
             <div className="flex items-center gap-3">
               <div className={`${stat.color} rounded-lg p-2`}>
-                <stat.icon className="w-5 h-5 text-white" />
+                <stat.icon className="w-3 h-3 text-white" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                <div className="text-xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-xs text-gray-600">{stat.label}</div>
               </div>
             </div>

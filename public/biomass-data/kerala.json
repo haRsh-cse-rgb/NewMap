@@ -1,0 +1,90 @@
+{
+    "state": "Kerala",
+    "districts":[
+        {
+        "name": "Alappuzha",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 49.44, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 32.22, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 3.19, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Ernakulam",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Idukki",
+        "bioenergyPotential": { "kharifRice": 6.79, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 4.43, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.44, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kannur",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kasaragod",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kollam",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0.01, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kottayam",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 48.68, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 31.72, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 3.14, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Kozhikode",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Malappuram",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Palakkad",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Pathanamthitta",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0.33, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0.22, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0.02, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Thiruvanthapuram",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Thrissur",
+        "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+        "name": "Wayanad",
+        "bioenergyPotential": { "kharifRice": 0.25, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "grossBiomass": { "kharifRice": 0.33, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+        "surplusBiomass": { "kharifRice": 0.02, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        }
+        ]
+
+}

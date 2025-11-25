@@ -1,0 +1,78 @@
+{
+    "state": "Himachal Pradesh",
+    "districts":[
+        {
+          "name": "Bilaspur",
+          "bioenergyPotential": { "kharifRice": 5.33, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0.66, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0.34, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Chamba",
+          "bioenergyPotential": { "kharifRice": 136.88, "rabiRice": 0, "wheat": 19.44, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 20.86, "rabiRice": 0, "wheat": 5.48, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 8.83, "rabiRice": 0, "wheat": 1.12, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Hamirpur",
+          "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Kangra",
+          "bioenergyPotential": { "kharifRice": 0.16, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0.01, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Kinnaur",
+          "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Kullu",
+          "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Lahaul",
+          "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Mandi",
+          "bioenergyPotential": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0, "rabiRice": 0, "wheat": 0, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Shimla",
+          "bioenergyPotential": { "kharifRice": 71.88, "rabiRice": 0, "wheat": 92.6, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 15.88, "rabiRice": 0, "wheat": 34, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 4.64, "rabiRice": 0, "wheat": 5.32, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Sirmaur",
+          "bioenergyPotential": { "kharifRice": 974.26, "rabiRice": 0, "wheat": 654, "cotton": 0, "sugarcane": 1001.22 },
+          "grossBiomass": { "kharifRice": 268.5, "rabiRice": 0, "wheat": 332.25, "cotton": 0, "sugarcane": 127.96 },
+          "surplusBiomass": { "kharifRice": 62.86, "rabiRice": 0, "wheat": 37.59, "cotton": 0, "sugarcane": 50.06 }
+        },
+        {
+          "name": "Solan",
+          "bioenergyPotential": { "kharifRice": 0.56, "rabiRice": 0, "wheat": 46.08, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 0.69, "rabiRice": 0, "wheat": 17.5, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 0.04, "rabiRice": 0, "wheat": 2.65, "cotton": 0, "sugarcane": 0 }
+        },
+        {
+          "name": "Una",
+          "bioenergyPotential": { "kharifRice": 185.24, "rabiRice": 0, "wheat": 247.48, "cotton": 0, "sugarcane": 0 },
+          "grossBiomass": { "kharifRice": 22.81, "rabiRice": 0, "wheat": 36.61, "cotton": 0, "sugarcane": 0 },
+          "surplusBiomass": { "kharifRice": 11.95, "rabiRice": 0, "wheat": 14.22, "cotton": 0, "sugarcane": 0 }
+        }
+      ]
+
+}

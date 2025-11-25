@@ -10,6 +10,7 @@ export interface Plant {
   category?: string; // Comma-separated categories for steel plants
   categoryCapacity?: string; // Comma-separated capacities corresponding to categories
   status: PlantStatus;
+  address: string;
 }
 
 export type PlantType = 'steel' | 'sponge_iron' | 'pellets' | 'blast_furnace';

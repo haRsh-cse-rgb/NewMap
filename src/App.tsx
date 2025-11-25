@@ -56,32 +56,36 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="h-screen flex flex-col">
         <header className="bg-white shadow-md border-b border-gray-200 z-10">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-2">
-                  <MapIcon className="w-6 h-6 text-white" />
+          <div className="max-w-7xl mx-auto px-4 py-2">
+            <div className="flex items-center gap-4 justify-between">
+              <div className="flex items-center gap-2 min-w-[220px]">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-md p-1.5">
+                  <MapIcon className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-900">India Industrial Map</h1>
-                  <p className="text-sm text-gray-600">Steel, Sponge Iron, Pellets & Blast Furnace Plants</p>
+                <div className="leading-tight">
+                  <h1 className="text-base font-semibold text-gray-900">India Industrial Map</h1>
+                  <p className="text-[11px] text-gray-600">Steel, Sponge Iron, Pellets & Blast Furnace Plants</p>
                 </div>
               </div>
+
+              <div className="flex-1 max-w-3xl">
+                <SearchBar
+                  plants={samplePlants}
+                  onPlantSelect={handlePlantSelect}
+                  selectedPlant={selectedPlant}
+                />
+              </div>
+
               {selectedDistrict && (
                 <button
                   onClick={handleBackToIndia}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-sm"
+                  className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors text-sm"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  Back to India Map
+                  Back
                 </button>
               )}
             </div>
-            <SearchBar
-              plants={samplePlants}
-              onPlantSelect={handlePlantSelect}
-              selectedPlant={selectedPlant}
-            />
           </div>
         </header>
 
@@ -94,7 +98,9 @@ function App() {
             <Menu className="w-5 h-5 text-gray-700" />
           </button>
 
-          <aside className="hidden lg:block w-80 bg-slate-50 border-r border-gray-200 overflow-y-auto p-4 space-y-4">
+          {/* Desktop Sidebar (compact) */}
+          <aside className="hidden lg:block w-64 bg-slate-50 border-r border-gray-200 overflow-y-auto p-2 space-y-2">
+
             <StatsPanel plants={filteredPlants} />
             <FilterPanel
               plants={samplePlants}
@@ -104,9 +110,6 @@ function App() {
               onStateChange={setSelectedState}
               onDistrictChange={setSelectedDistrict}
               onTypeChange={setSelectedType}
-              isOpen={sidebarOpen}
-              onToggle={() => setSidebarOpen(!sidebarOpen)}
-              showHeader={true}
             />
             <BiomassSelector
               onDistrictSelect={(state, district) => {
@@ -121,12 +124,12 @@ function App() {
             <div className={`
               fixed lg:relative lg:translate-x-0 transition-transform duration-300 ease-in-out z-30
               ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-              top-0 left-0 h-full w-80 bg-white shadow-xl lg:shadow-lg
-              lg:rounded-xl lg:p-6 p-6 space-y-6 overflow-y-auto
+              top-0 left-0 h-full w-72 bg-white shadow-xl lg:shadow-lg
+              lg:rounded-xl lg:p-4 p-3 space-y-3 overflow-y-auto
             `}>
-              <div className="flex items-center justify-between mb-4 pt-4">
+              <div className="flex items-center justify-between mb-3 pt-2">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-lg font-semibold text-gray-900">Filters & Data</h2>
+                  <h2 className="text-base font-semibold text-gray-900">Filters & Data</h2>
                 </div>
                 <button
                   onClick={() => setSidebarOpen(false)}
@@ -146,9 +149,6 @@ function App() {
                 onStateChange={setSelectedState}
                 onDistrictChange={setSelectedDistrict}
                 onTypeChange={setSelectedType}
-                isOpen={true}
-                onToggle={() => {}}
-                showHeader={false}
               />
               
               <BiomassSelector
@@ -170,7 +170,9 @@ function App() {
 
           <main className="flex-1 relative">
             {selectedDistrict && (
-              <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg z-10 border border-gray-200">
+              // <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg z-10 border border-gray-200">
+              <div className="absolute top-3 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-md z-10 border border-gray-200 text-sm">
+
                 <div className="text-center">
                   <div className="text-sm text-gray-600">Viewing</div>
                   <div className="font-semibold text-gray-900">{selectedDistrict}, {selectedState}</div>
@@ -207,3 +209,4 @@ function App() {
 }
 
 export default App;
+

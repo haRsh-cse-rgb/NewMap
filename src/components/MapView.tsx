@@ -1,64 +1,63 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { Plant } from '../types';
-import PlantDetailsCapsule from './PlantDetailsCapsule';
 import 'leaflet/dist/leaflet.css';
 
+// ---------- Smaller Custom Icons ----------
 const steelIcon = L.divIcon({
   className: 'custom-marker',
-  html: `<div style="background: #ef4444; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="none">
+  html: `<div style="background: #ef4444; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 15 15" fill="white" stroke="none">
       <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
     </svg>
   </div>`,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
-  popupAnchor: [0, -12]
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
 });
 
 const spongeIronIcon = L.divIcon({
   className: 'custom-marker',
-  html: `<div style="background: #f59e0b; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-      <rect x="3" y="3" width="18" height="18" rx="2"/>
+  html: `<div style="background: #f59e0b; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 15 15" fill="none" stroke="white" stroke-width="2">
+      <rect x="3" y="3" width="9" height="9" rx="2"/>
     </svg>
   </div>`,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
-  popupAnchor: [0, -12]
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
 });
 
 const pelletsIcon = L.divIcon({
   className: 'custom-marker',
-  html: `<div style="background: #3b82f6; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="none">
-      <circle cx="12" cy="12" r="10"/>
+  html: `<div style="background: #3b82f6; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 15 15" fill="white" stroke="none">
+      <circle cx="7.5" cy="7.5" r="4"/>
     </svg>
   </div>`,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
-  popupAnchor: [0, -12]
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
 });
 
 const blastFurnaceIcon = L.divIcon({
   className: 'custom-marker',
-  html: `<div style="background: #8b5cf6; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="none">
-      <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/>
+  html: `<div style="background: #8b5cf6; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 15 15" fill="white" stroke="none">
+      <polygon points="7.5,1 9,5 13,5 9.5,8 10.5,12 7.5,9.5 4.5,12 5.5,8 2,5 6,5"/>
     </svg>
   </div>`,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
-  popupAnchor: [0, -12]
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
 });
 
-interface MapViewProps {
-  plants: Plant[];
-  selectedDistrict: string | null;
-  onMarkerClick?: (plant: Plant) => void;
-}
-
+// ---------- Map Controller ----------
 function MapController({ selectedDistrict, plants }: { selectedDistrict: string | null; plants: Plant[] }) {
   const map = useMap();
 
@@ -77,6 +76,13 @@ function MapController({ selectedDistrict, plants }: { selectedDistrict: string 
   }, [selectedDistrict, plants, map]);
 
   return null;
+}
+
+// ---------- Main Map View ----------
+interface MapViewProps {
+  plants: Plant[];
+  selectedDistrict: string | null;
+  onMarkerClick?: (plant: Plant) => void;
 }
 
 export default function MapView({ plants, selectedDistrict, onMarkerClick }: MapViewProps) {
@@ -117,6 +123,7 @@ export default function MapView({ plants, selectedDistrict, onMarkerClick }: Map
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <MapController selectedDistrict={selectedDistrict} plants={plants} />
+
       {filteredPlants.map((plant) => (
         <Marker
           key={plant.id}
