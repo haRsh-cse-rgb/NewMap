@@ -57,7 +57,10 @@ export default function BiomassPanel({ stateName, districtName, onClose }: Bioma
       }
 
       const data = await response.json();
-      const found = data.districts.find((d: District) => d.name === district);
+      // Case-insensitive district matching
+      const found = data.districts.find((d: District) => 
+        d.name.toLowerCase().trim() === district.toLowerCase().trim()
+      );
       setDistrictData(found || null);
     } catch (error) {
       console.error('Error loading district data:', error);

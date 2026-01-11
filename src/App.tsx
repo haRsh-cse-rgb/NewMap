@@ -201,6 +201,10 @@ function App() {
           <PlantDetailsCapsule
             plant={selectedPlantForDetails}
             onClose={() => setSelectedPlantForDetails(null)}
+            onBiomassClick={(state, district) => {
+              setBiomassState(state);
+              setBiomassDistrict(district);
+            }}
           />
         )}
       </div>

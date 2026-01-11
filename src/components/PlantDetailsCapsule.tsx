@@ -1,12 +1,13 @@
 import { Plant } from '../types';
-import { X, MapPin, Building2, Zap, Factory } from 'lucide-react';
+import { X, MapPin, Building2, Zap, Factory, Leaf } from 'lucide-react';
 
 interface PlantDetailsCapsuleProps {
   plant: Plant;
   onClose: () => void;
+  onBiomassClick?: (state: string, district: string) => void;
 }
 
-export default function PlantDetailsCapsule({ plant, onClose }: PlantDetailsCapsuleProps) {
+export default function PlantDetailsCapsule({ plant, onClose, onBiomassClick }: PlantDetailsCapsuleProps) {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'steel':
@@ -130,6 +131,17 @@ export default function PlantDetailsCapsule({ plant, onClose }: PlantDetailsCaps
             <div>Lng: {plant.longitude.toFixed(4)}</div>
           </div>
         </div>
+
+        {/* Biomass Details Button */}
+        {onBiomassClick && (
+          <button
+            onClick={() => onBiomassClick(plant.state, plant.district)}
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors shadow-sm"
+          >
+            <Leaf className="w-4 h-4" />
+            <span>Biomass Details</span>
+          </button>
+        )}
       </div>
     </div>
   );
